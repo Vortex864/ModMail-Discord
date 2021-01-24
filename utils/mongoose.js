@@ -14,7 +14,7 @@ module.exports = {
             family: 4
         }
 
-        mongoose.connect('mongodb+srv://admin:l7YTG5d6AXtJPrbq@mod-mail-cluster.hjmwv.mongodb.net/<dbname>?retryWrites=true&w=majority', dbOptions)
+        mongoose.connect('your_mongodb_URI', dbOptions)
         mongoose.set('useFindAndModify', false)
         mongoose.Promise = global.Promise
 
