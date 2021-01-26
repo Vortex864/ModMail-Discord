@@ -1,4 +1,5 @@
 {
     "token": "your_token_here",
     "prefix": "your_prefix_here"
+    "mongodbURI": "your_mongodbURI_here"
 }
