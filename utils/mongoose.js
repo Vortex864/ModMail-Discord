@@ -1,5 +1,6 @@
   
 const mongoose = require('mongoose')
+const config = require('../config.json')
 
 module.exports = {
     init: () => {
@@ -14,7 +15,7 @@ module.exports = {
             family: 4
         }
 
-        mongoose.connect('your_mongodb_URI', dbOptions)
+        mongoose.connect(config.monogdbURI, dbOptions)
         mongoose.set('useFindAndModify', false)
         mongoose.Promise = global.Promise
 
