@@ -28,5 +28,5 @@ This Bot allows you to select an Option from the ModMail Menu to fulfill the use
 ✓ You are allowed to Use this Template to create a Private ModMail Bot (with the use of this template) which cannot be publicly invited to any server. Recommended to be used for a single server as a Private ModMail Bot.<br>
 ✗ You are NOT allowed to create a Public ModMail Bot (with the use of this template) which can be publicly invited to any server. Doing so may result in legal action taken against you for "Violation of our Code of Conduct".
 
-### Liscence
+### License
 MIT License
