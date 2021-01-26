@@ -7,6 +7,7 @@ This Bot allows you to select an Option from the ModMail Menu to fulfill the use
 ### Steps to Use
 
 - Create a Discord Bot on the [Discord Developer Portal](https://discord.com/developers) and Invite the bot to your server!
+- Install Node.JS at [NodeJS Org](https://nodejs.org)
 - Clone this Repository
 - Rename the file: `config-example.json` to `config.json`
 - Enter the needed information in config.json. Read [Config Keys](https://github.com/sascox555/ModMail-Discord#config-keys) For more info!
@@ -28,4 +29,4 @@ This Bot allows you to select an Option from the ModMail Menu to fulfill the use
 X You are NOT allowed to create a Public ModMail Bot (with the use of this template) which can be publicly invited to any server. Doing so may result in legal action taken against you for "Violation of our Code of Conduct".
 
 ### Liscence
-wait
+MIT License
