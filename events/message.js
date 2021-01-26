@@ -19,15 +19,17 @@ module.exports = async (client, message) => {
 
             const rolerequest = new Discord.MessageEmbed()
             .setTitle('Role Request')
-            .setDescription('Please react with the corresponding reaction for the Role you want to claim.\n\n1️⃣ - YouTuber\n2️⃣ - Twitch Streamer\n3️⃣ - Media Star\n4️⃣ - Giveaways Conductor\n\nIf the role you want to claim is something else, Please DM a Moderator to claim your role!')
+            .setDescription('Please react with the corresponding reaction for the Role you want to claim.\n\n1️⃣ - YouTuber\n2️⃣ - Twitch Streamer\n3️⃣ - Media Star\n4️⃣ - Giveaways Conductor\n5️⃣ - Event Host\n\n If the role you want to claim is something else, Please DM a Moderator to claim your role!')
+            .setColor('RANDOM')
             message.author.send(rolerequest).then((reqrole) => {
                 reqrole.react('1️⃣');
                 reqrole.react('2️⃣');
                 reqrole.react('3️⃣');
                 reqrole.react('4️⃣');
+                reqrole.react('5️⃣');
           
                 const reqrolefilter = (reaction, user) => {
-                  return ['1️⃣', '2️⃣', '3️⃣', '4️⃣'].includes(reaction.emoji.name) && !user.bot;
+                  return ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣'].includes(reaction.emoji.name) && !user.bot;
                 };
 
                 const reqrolecollector = reqrole.createReactionCollector(reqrolefilter, {
@@ -88,22 +90,13 @@ module.exports = async (client, message) => {
                         return channel2.send(reqroleresultembed2)
                         
                       } else if (emoji === '4️⃣') {
-                        message.author.send('Your request has been submitted!\nNote: You will not receive a response from ModMail for getting accepted or denied.')
-
-                        const channel3 = client.channels.cache.find(c => c.name === 'role-requests')
-
-                        const reqroleresultembed3 = new Discord.MessageEmbed()
-                        .setTitle('New Role Request')
-                        .addField('User:', message.author, true)
-                        .addField('Role Requested:', 'Giveaways Conductor', false)
-                        .addField('Does Meet Requirements:', 'Manual Check Required', false)
-                        .setColor('RANDOM')
-                        .setTimestamp()
-                        .setFooter(`ID: ${message.author.id}`)
-                        return channel3.send(reqroleresultembed3)
+                        message.author.send('This Role is currently Unobtainable as we already are full on slots, try again later!')
                         
+                      } else if (emoji === '5️⃣') {
+                        message.author.send('This Role is currently Unobtainable as we already are full on slots, try again later!')
+                
                       } else {
-                          return message.author.send('That\'s not a valid reaction!')
+                        return message.author.send('That\'s not a valid reaction!')
                       }
                     }
                 })
